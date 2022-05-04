@@ -2,6 +2,7 @@ package com.main.gyorsgyros.homePageActivity;
 
 import android.app.NotificationManager;
 import android.content.*;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Message;
@@ -112,6 +113,21 @@ public class HomePageActivity extends AppCompatActivity {
     protected void onPause() {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(messageReceiver);
         super.onPause();
+    }
+
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE || newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            try{
+                mService.send(Message.obtain(null, DatabaseHandler.MSG_GET_FOODS, 0, 0));
+            }catch (Exception ignored){
+
+            }
+            Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     public void onHome(View view){

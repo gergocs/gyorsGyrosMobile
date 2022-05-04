@@ -1,6 +1,7 @@
 package com.main.gyorsgyros.cartActivity;
 
 import android.content.*;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Message;
@@ -68,6 +69,21 @@ public class CartActivity extends AppCompatActivity {
     protected void onPause() {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(messageReceiver);
         super.onPause();
+    }
+
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE || newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            try{
+                mService.send(Message.obtain(null, DatabaseHandler.MSG_GET_CART, 0, 0));
+            }catch (Exception ignored){
+
+            }
+            Intent intent = new Intent(getApplicationContext(), CartActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     private final ServiceConnection mConnection = new ServiceConnection() {

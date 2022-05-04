@@ -1,6 +1,7 @@
 package com.main.gyorsgyros.userActivity;
 
 import android.content.*;
+import android.content.res.Configuration;
 import android.os.*;
 import android.view.View;
 import android.widget.EditText;
@@ -94,6 +95,20 @@ public class UserActivity extends AppCompatActivity {
         }
     };
 
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE || newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            try{
+                mService.send(Message.obtain(null, DatabaseHandler.MSG_GET_ORDERS, 0, 0));
+            }catch (Exception ignored){
+
+            }
+            Intent intent = new Intent(getApplicationContext(), UserActivity.class);
+            startActivity(intent);
+            finish();
+        }
+    }
 
     public void onHome(View view){
         try{
