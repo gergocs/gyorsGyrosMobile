@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="wrap_content">
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RelativeLayout android:layout_height="110dp" android:layout_width="match_parent">
+
+            <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/element_text"/>
+            <ImageView
+                    android:id="@+id/row_wallet_redeem_img"
+                    android:layout_width="189dp"
+                    android:layout_height="94dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/gyros" android:contentDescription="@string/image_of_the_food"
+                    android:layout_alignParentStart="true" android:layout_marginStart="0dp"
+                    android:layout_marginTop="2dp" android:layout_below="@+id/name"/>
+            <Button
+                    android:drawableBottom="@drawable/ic_baseline_remove_shopping_cart_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/removeFromCart"
+                    android:layout_marginBottom="-49dp"
+                    android:layout_toEndOf="@+id/row_wallet_redeem_img" android:layout_marginStart="78dp"
+                    android:layout_marginTop="28dp" android:layout_alignParentTop="true"/>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

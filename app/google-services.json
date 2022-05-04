@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "417533270041",
+    "firebase_url": "https://bookshop-7c5f7-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "bookshop-7c5f7",
+    "storage_bucket": "bookshop-7c5f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417533270041:android:d726f04b12f64172be3288",
+        "android_client_info": {
+          "package_name": "com.main.gyorsgyros"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417533270041-cve1um8cqc7g1hrhtnuuhv2ohth2uisp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.main.gyorsgyros",
+            "certificate_hash": "7fdcc3a3c0237852d4e01f332e88a86e19a3d3de"
+          }
+        },
+        {
+          "client_id": "417533270041-vqqt9fgsfbjcp6vvo2fa86ip3ptifk35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVmdSjvVsDMXBgMFTUCt5egz3PE7cAnGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "417533270041-vqqt9fgsfbjcp6vvo2fa86ip3ptifk35.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

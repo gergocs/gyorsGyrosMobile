@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content"
+                xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="wrap_content">
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RelativeLayout android:layout_height="110dp" android:layout_width="match_parent">
+            <TextView
+                    android:id="@+id/orderDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:text="@string/element_text"/>
+            <TextView
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="@string/element_text"
+                    android:layout_marginBottom="-38dp" android:layout_alignBottom="@+id/orderDate"/>
+            <TextView
+                    android:id="@+id/orderItems"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="@string/element_text" android:layout_marginTop="41dp"
+                    android:layout_below="@+id/orderDate"/>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

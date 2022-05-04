@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <Button
+            android:drawableBottom="@drawable/ic_baseline_home_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/home"
+            android:onClick="onHome" android:layout_toStartOf="@+id/cart" android:layout_marginEnd="17dp"/>
+    <Button
+            android:drawableBottom="@drawable/ic_baseline_shopping_cart_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/goToCart"
+            android:onClick="onCart" android:layout_toStartOf="@+id/user" android:layout_marginEnd="18dp"/>
+    <Button
+            android:drawableBottom="@drawable/ic_baseline_account_box_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user"
+            android:onClick="onUser"
+            android:layout_toStartOf="@+id/exit"
+            android:layout_marginEnd="13dp"/>
+    <Button
+            android:drawableBottom="@drawable/ic_baseline_exit_to_app_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/exit"
+            android:onClick="onExit" android:layout_alignParentEnd="true" android:layout_marginEnd="5dp"
+    />
+</RelativeLayout>

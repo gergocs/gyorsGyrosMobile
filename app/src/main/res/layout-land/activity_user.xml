@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <RelativeLayout android:layout_width="wrap_content"
+                    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/order"
+                android:layout_width="match_parent" android:layout_height="367dp"
+                android:layout_marginTop="11dp" android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp" android:layout_below="@+id/updateAddress">
+        </androidx.recyclerview.widget.RecyclerView>
+        <include android:id="@+id/news_title"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 layout="@layout/menu"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/address"
+                android:layout_marginTop="9dp" android:layout_below="@+id/news_title"/>
+        <Button android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/change_address"
+                android:id="@+id/updateAddress"
+                android:onClick="onChangeAddress" android:layout_marginTop="18dp"
+                android:layout_below="@+id/houseNumber"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:autofillHints="Budapest"
+                android:id="@+id/city"
+                android:layout_marginTop="15dp" android:layout_below="@+id/address"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="10"
+                android:autofillHints="Alma utca"
+                android:id="@+id/street"
+                android:layout_marginTop="21dp" android:layout_below="@+id/city"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text|number"
+                android:ems="10"
+                android:autofillHints="10"
+                android:id="@+id/houseNumber"
+                android:layout_marginTop="18dp" android:layout_below="@+id/street"/>
+    </RelativeLayout>
+</ScrollView>
